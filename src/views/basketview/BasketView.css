@@ -1,0 +1,63 @@
+
+.basket_wrapper{
+    display: flex;
+    padding: 20px;
+    background-color: white;
+    height: max-content;
+    
+}
+
+.basket_ad{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.basket_title{
+    margin-right: 10px;
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.basket_product{
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    /* justify-content: flex-end; */
+    margin: 10px;
+    padding: 20px;
+    width: 70%;
+    max-height: 400px;
+    min-width: 100px;
+    background-color: rgb(247, 247, 247);
+    z-index: 1;
+    }
+    
+.basket_img > img {
+        /* max-height: 200px; */
+        width:180px !important;
+        height: 180px;
+        object-fit: contain;
+        margin-bottom: 15px;
+    } 
+    
+    .basket_button{
+        max-height: 50px;
+        background: #f0c14b;
+        border: 1px solid;
+        margin-top: 10px;
+        border-color: #a88734 #9c7e31 #846a29;
+        color: #111;
+    }
+    .basket_price{
+        margin-top: 5px;
+    }
+    .basket_item_title{
+        /* height: 100px; */
+        padding-left: 20px;
+        /* margin-left: 20px; */
+        margin-bottom: 15px;
+        font-weight: 800;
+        font-size: 17px;
+        
+    }
+    .basket_rating{display: flex;}

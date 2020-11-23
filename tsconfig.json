@@ -18,9 +18,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "react",
+    "sourceMap": true,    
+    "outDir": "./build",                        /* Redirect output structure to the directory. */
+    "rootDir": "./src",
+    "types": ["node"],   
   },
   "include": [
-    "src"
-  ]
+    "src/**/*"
+  ],
+  "exclude": ["node_modules", "./build/**/*"]
 }

@@ -1,0 +1,77 @@
+.notification_wrapper{
+    position: fixed;
+    top: 70px;
+    right: 110px;
+    width: 100px;
+    z-index: 100;
+}
+.notification_item{
+    /* position: fixed;
+    top: 70px;
+    right: 10px;
+    width: 300px;
+    z-index: 100; */
+     background-color: rgba(195, 235, 250, 0.823);
+}
+
+.notification_item{
+    box-shadow: 0 0 10px rgba(0, 0  , 0, 0.7);
+    border: 2px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    animation: SlideLeft 0.4s;
+    animation-fill-mode: forwards;
+    width: 200px;
+
+
+}
+
+@keyframes SlideLeft {
+    0% {
+        margin-left: 150%;
+    }
+    100% {
+        margin-left: 0%;
+    }
+}
+
+@keyframes SlideRight {
+    0% {
+        margin-left: 0%;
+    }
+    100% {
+        margin-left: 220%;
+    }
+}
+
+.notification_item.exit {
+    animation: SlideRight 0.4s;
+    animation-fill-mode: forwards;
+}
+.notification_item p {
+    margin: 0;
+    margin-left: 10px;
+    padding: 10px 0 ;
+    
+}
+
+.notification_item  .bar {
+    height: 3px;
+    
+ 
+}
+
+.notification_item.success  .bar{
+    background-color: rgba(0, 174, 255, 0.604);
+}
+.notification_item.error  .bar{
+    background-color: red;
+}
+.notification_item .notification_titlee{
+    margin: 0;
+    margin-left: 10px;
+    /* padding: 10px 0 ; */
+    font-size: 14px;
+    font-weight: 700;
+}
