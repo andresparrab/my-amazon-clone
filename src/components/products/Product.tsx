@@ -52,7 +52,7 @@ const Product = ({
     dispatchNote({
       type: "SUCCESS",
       // message: basket[basket.length - 1].title,
-      message: basket.length + 1,
+      message: basket[basket.length + 1]?.title,
     });
   };
 
