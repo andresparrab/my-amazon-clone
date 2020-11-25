@@ -52,7 +52,7 @@ const Product = ({
     dispatchNote({
       type: "SUCCESS",
       // message: basket[basket.length - 1].title,
-      message: basket[basket.length + 1]?.title,
+      message: basket[basket.length - 1]?.title,
     });
   };
 
@@ -87,7 +87,7 @@ const Product = ({
             <button className="product_button" onClick={onClickAction}>
               Add to basket
             </button>
-            {/* <button onClick={notifi}>notifi</button> */}
+            {notifi}
           </div>
         )}
       </div>
