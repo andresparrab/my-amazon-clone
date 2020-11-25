@@ -9,6 +9,7 @@ import { useHistory } from "react-router-dom";
 const Subtotal = (): JSX.Element => {
   const history = useHistory();
   const [{ basket }, dispatch] = useStateValue();
+  console.log("THIS IS INSIDE SUBTOTAL BASKET:", basket);
 
   return (
     <div className="subtotal">

@@ -1,9 +1,9 @@
-import { ContactSupportOutlined } from "@material-ui/icons";
+// import { ContactSupportOutlined } from "@material-ui/icons";
 import React, { useState } from "react";
 import { useNotification } from "../notifications/NotificationProvider";
 import { useStateValue } from "../shared/provider/StateProvider";
 import "./Produc.css";
-useNotification;
+//import { BL } from "../shared/provider/Reducer";
 
 const Product = ({
   title,
@@ -22,12 +22,9 @@ const Product = ({
 }): JSX.Element => {
   const dispatchNote = useNotification();
   const [{ basket }, dispatch] = useStateValue();
-  // const [iteml, setIteml] = useState(0);
-
-  //hideButton = false;
 
   const addToBasket = (): any => {
-    // dispatch the item into the data layer
+    //dispatch the item into the data layer
 
     dispatch({
       type: "ADD_TO_BASKET",
@@ -39,20 +36,17 @@ const Product = ({
         rating: rating,
       },
     });
-
-    // dispatchNote({
-    //   type: "SUCCESS",
-    //   // message: "Itemaaa added to basket",
-    //   message: "basket[ItemLenght + 1].id,",
-    // });
   };
 
   const notifi = () => {
-    // ASK TEACHER HOW I CAN GET THE FIRST ITEM, AND THE LAST ITEM
+    dispatch({
+      type: "DEFAULT",
+    });
+
     dispatchNote({
       type: "SUCCESS",
-      // message: basket[basket.length - 1].title,
-      message: basket[basket.length - 1]?.title,
+      image: image,
+      message: title.substr(0, 27),
     });
   };
 
@@ -87,7 +81,7 @@ const Product = ({
             <button className="product_button" onClick={onClickAction}>
               Add to basket
             </button>
-            {notifi}
+            {/* {notifi} */}
           </div>
         )}
       </div>

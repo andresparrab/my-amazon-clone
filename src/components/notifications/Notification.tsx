@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import "./Notification.css";
 export const Notification = (props: any): JSX.Element => {
   const [exit, setExit] = useState(false);
   const [width, setWidth] = useState(0);
@@ -54,13 +54,16 @@ export const Notification = (props: any): JSX.Element => {
     <div
       onMouseEnter={handlePauseTimer}
       onMouseLeave={handleStartTimer}
-      className={`notification_item ${props.type === "SUCCESS" ? "success" : "error"} ${
-        exit ? "exit" : ""
-      }`}
+      // eslint-disable-next-line prettier/prettier
+      className={`notification_item ${props.type === "SUCCESS" ? "success" : "error"} ${exit ? "exit" : ""
+        // eslint-disable-next-line prettier/prettier
+        }`}
     >
-      <h4 className="notification_titlee">Number of item(s) added: </h4>
-      <p>{props.message}</p>
-
+      <h4 className="notification_title">Number of item(s) added: </h4>
+      <div className="itemInfo">
+        <img className="itemSmall" src={props.image} />
+        <p>{props.message}</p>
+      </div>
       <div className="bar" style={{ width: `${width}%` }} />
     </div>
   );

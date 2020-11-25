@@ -13,11 +13,13 @@ export const StateProvider = ({
   reducer: any;
   initialState: any;
   children: any;
-}): JSX.Element => (
-  <StateContext.Provider value={useReducer(reducer, initialState)}>
-    {children}
-  </StateContext.Provider>
-);
-
+}): JSX.Element => {
+  // console.log("THIS IS SINSIDE SATEPROVIDER reducer", children);
+  return (
+    <StateContext.Provider value={useReducer(reducer, initialState)}>
+      {children}
+    </StateContext.Provider>
+  );
+};
 // Pull information from the data layer
 export const useStateValue = (): any => useContext(StateContext);

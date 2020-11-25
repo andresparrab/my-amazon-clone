@@ -1,0 +1,10 @@
+.itemInfo {
+  display: flex;
+}
+.itemInfo p {
+  margin-left: 20px;
+}
+
+.itemSmall {
+  max-height: 50px;
+}

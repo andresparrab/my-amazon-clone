@@ -10,6 +10,8 @@ export const getBasketTotal = (basket: []): number =>
   }, 0);
 
 const reducer = (state: any, action: any) => {
+  const BL = () => state.basket.length;
+
   console.log("this is the action: ", action);
   switch (action.type) {
     case "ADD_TO_BASKET": {
@@ -50,9 +52,13 @@ const reducer = (state: any, action: any) => {
       return { ...state, basket: [] };
     }
 
-    case "DEFAULT":
-      return state;
-
+    case "DEFAULT": {
+      console.log("inside DEFAULT: ", BL);
+      return {
+        ...state,
+        basket: [...state.basket],
+      };
+    }
     // default:
     //   return state;
   }
@@ -62,5 +68,4 @@ const reducer = (state: any, action: any) => {
       return state;
   }
 };
-
 export default reducer;

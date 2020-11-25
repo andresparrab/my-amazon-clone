@@ -1,69 +1,68 @@
-.navigation{
-    height: 60px;
-    display: flex;
-    align-items: center;
-    background-color:#131921;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  
+.navigation {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #131921;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.navigation_nav{
-    display: flex;
-    justify-content: space-evenly;
+.navigation_nav {
+  display: flex;
+  justify-content: space-evenly;
 }
-.navigation_logo{
-    width: 100px;
-    object-fit: contain;
-    margin: 0 20px;
-    margin-top: 18px;
+Link:any-link {
+  text-decoration: none;
 }
-.navigation_search{
-    display: flex;
-    flex: 1;
-    align-items: center;
-    border-radius: 34px;
+.navigation_logo {
+  width: 100px;
+  object-fit: contain;
+  margin: 0 20px;
+  margin-top: 18px;
 }
-.navigation_searchInput{
-    height: 12px;
-    padding: 10px;
-    border: none;
-    width: 100%;
+.navigation_search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border-radius: 34px;
+}
+.navigation_searchInput {
+  height: 12px;
+  padding: 10px;
+  border: none;
+  width: 100%;
 }
 
-.navigation_searchIcon{
+.navigation_searchIcon {
   padding: 5px;
   height: 22px !important;
   background-color: #cd9042;
-  
-
 }
 
-.navigation_option{
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    margin-right: 10px;
-    color:white;
+.navigation_option {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
 }
 
-.navigation_optionLineOne{
-    font-size: 13px;
+.navigation_optionLineOne {
+  font-size: 13px;
 }
 
-.navigation_optionLineTwo{
-    font-size: 16px !important;
-    font-weight: 800;
+.navigation_optionLineTwo {
+  font-size: 16px !important;
+  font-weight: 800;
 }
 
-.navigation_optionBasket{
-    display: flex;
-    align-items: center;
-    color: white;
+.navigation_optionBasket {
+  display: flex;
+  align-items: center;
+  color: white;
 }
-.navigation_BasketCount{
-    margin-left: 10px;
-    margin-right: 10px;
-
+.navigation_BasketCount {
+  margin-left: 10px;
+  margin-right: 10px;
 }
