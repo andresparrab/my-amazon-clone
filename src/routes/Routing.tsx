@@ -9,7 +9,6 @@ import CheckoutView from "../views/checkoutView/CheckoutView";
 import OrdersView from "../views/ordersView/OrdersView";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
-// import { Elements } from "@stripe/react-stripe-js";
 
 const promise = loadStripe(
   "pk_test_51Ho3r8JvugdMxF8ptK82mSnk4hsk8ZrRKTMzIQNvBN3rjOBNLOgaw6Pltydw0AVgoTQIritC5oUxsOwqN4W1fbJ900aesaPkpU"
@@ -27,14 +26,12 @@ export const Routing = (props: any): JSX.Element => {
         <Route exact path={RoutingPaths.LoginView} component={LoginView}></Route>
         <Route exact path={RoutingPaths.OrdersView} component={OrdersView}></Route>
 
-        {/* <Elements stripe={promise}> */}
         <Route exact path={RoutingPaths.CheckoutView}>
           <Elements stripe={promise}>
             <CheckoutView />
           </Elements>
         </Route>
-        {/* </Elements> */}
-        {/*  */}
+
         <Route component={HomeView} />
       </Switch>
     </Router>

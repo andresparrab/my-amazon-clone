@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React, { useEffect, useState } from "react";
 import { db } from "../../components/shared/provider/firebase";
 import { useStateValue } from "../../components/shared/provider/StateProvider";
@@ -12,7 +13,6 @@ interface StateProperties {
 const OrdersView = () => {
   const [orders, setOrders] = useState<StateProperties[]>([]);
   const [{ basket, user }, dispatch] = useStateValue();
-  console.log("this is orders>>>>><<<", orders);
   useEffect(() => {
     if (user) {
       db.collection("users")
@@ -33,7 +33,6 @@ const OrdersView = () => {
       setOrders([]);
     }
   }, [user]);
-  console.log("this is orders AFTER USEEFFECT>>>>><<<", orders);
   return (
     <div className="orders">
       <h1>Your Orders</h1>
@@ -41,8 +40,8 @@ const OrdersView = () => {
         {orders?.map((
           order //Goes trough every order from the  database ans sen it to Order.tsx
         ) => (
-          <Order order={order} />
-        ))}
+            <Order order={order} />
+          ))}
         {/* <Order order={orders} /> */}
       </div>
     </div>

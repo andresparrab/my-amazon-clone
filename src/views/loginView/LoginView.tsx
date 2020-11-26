@@ -16,7 +16,6 @@ const LoginView = () => {
         history.push("/");
       })
       .catch((error) => alert(error.message));
-    console.log("email and passwprd here: ", email, password);
   };
 
   const register = (e: any) => {
@@ -27,10 +26,8 @@ const LoginView = () => {
         if (auth) {
           history.push("/");
         }
-        console.log(auth);
       })
       .catch((error) => alert(error.message));
-    console.log("email and passwprd here: ", email, password);
   };
   return (
     <div className="login">

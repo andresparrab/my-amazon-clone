@@ -6,9 +6,8 @@ import "./CheckoutView.css";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import CurrencyFormat from "react-currency-format";
 import { getBasketTotal } from "../../components/shared/provider/Reducer";
-import { ContactSupportOutlined } from "@material-ui/icons";
-// import { Elements } from "@stripe/react-stripe-js";
-import { loadStripe } from "@stripe/stripe-js";
+
+//import { loadStripe } from "@stripe/stripe-js";
 import axios from "../../components/shared/provider/axios";
 import { db } from "../../components/shared/provider/firebase";
 
@@ -26,7 +25,6 @@ const CheckoutView = (): any => {
   const elements = useElements();
   const history = useHistory();
   const cardItem = elements?.getElement(CardElement);
-  const hideButton = false;
 
   useEffect(() => {
     // generates the special stripe secret wich allow us to charge a customer
@@ -40,11 +38,9 @@ const CheckoutView = (): any => {
     };
 
     getClientSecret();
-    console.log("this is clientsectet2222: >>>>", clientSecret);
   }, [basket]); // whenever the basket changes, make the request and update the special stripe secret that allow us to charge the custumers correct ammount
 
   const handleSubmit = async (e: any) => {
-    console.log("e.target.value");
     e.preventDefault();
     setProcessing(true);
     const payload: any = await stripe
@@ -67,7 +63,6 @@ const CheckoutView = (): any => {
         dispatch({
           type: "EMPTY_BASKET",
         });
-        console.log("BASKET EMPTY?<<<<<<<<<--------<<<<<<<<<");
         history.replace("/orders");
       });
   };
@@ -77,7 +72,6 @@ const CheckoutView = (): any => {
   };
 
   return (
-    // <Elements stripe={promise}>
     <div className="payment">
       <div className="payment_container">
         <h1>
@@ -102,7 +96,6 @@ const CheckoutView = (): any => {
           <div className="payment_title">
             <h3>Review items and delivery</h3>
           </div>
-          {/* <div className="payment_items">{Basket(hideButton)}</div> */}
           <div className="payment_items">{Basket()}</div>
         </div>
         {/* PAYMENT SECTION - PAYMENT METHOD */}
@@ -146,7 +139,6 @@ const CheckoutView = (): any => {
         </div>
       </div>
     </div>
-    // </Elements>
   );
 };
 export default CheckoutView;

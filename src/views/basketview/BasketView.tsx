@@ -3,13 +3,11 @@ import Subtotal from "../../components/subtotal/Subtotal";
 import "./BasketView.css";
 import { useStateValue } from "../../components/shared/provider/StateProvider";
 import Basket from "../../components/basket/Basket";
-//import Product from "../../components/products/Product";
-import { auth } from "../../components/shared/provider/firebase";
 import FlipMove from "react-flip-move";
 
 const BasketView = (): JSX.Element => {
-  const [{ basket, user }, dispatch] = useStateValue();
-  // const hideButton = false;
+  const [{ user }, dispatch] = useStateValue();
+
   return (
     <div className="basket_wrapper">
       <div className="basket_left">
@@ -22,7 +20,7 @@ const BasketView = (): JSX.Element => {
           <h3 className="basket_user">Hello, {user?.email.split(".", 1)[0]}</h3>
           <h2 className="basket_title">Your shooping basket</h2>
         </div>
-        {/* {Basket(hideButton)} */}
+
         <FlipMove verticalAlignment="top" enterAnimation="elevator" leaveAnimation="elevator">
           {Basket()}
         </FlipMove>

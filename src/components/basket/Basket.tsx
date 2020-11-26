@@ -1,21 +1,14 @@
 import React from "react";
-//import FlipMove from "react-flip-move";
-//import Subtotal from "../../components/subtotal/Subtotal";
-// import "./BasketView.css";
 import { useStateValue } from "../../components/shared/provider/StateProvider";
-import Product from "../products/Product";
-// const Basket = (hideButton: any): any => {
+
 const Basket = (): any => {
   const [{ basket }, dispatch] = useStateValue();
 
   const basketItems2 = basket.map(
     (Item: any): JSX.Element => {
-      console.log("THIS IS THE ID:", Item.id);
       const id = Item.id;
-      console.log("this is the basket id before remove function.......: ", id);
+
       const RemoveFromBasket = (props: any) => {
-        console.log("this is the basket id inside RemoveFromBasket.......: ", id);
-        // console.log("this is the hidebutton.......: ", hideButton);
         dispatch({
           type: "REMOVE_FROM_BASKET",
           id: id,
@@ -43,11 +36,9 @@ const Basket = (): any => {
                   ))}
               </div>
               <div>
-                {/* {!hideButton && ( */}
                 <button className="basket_button" onClick={RemoveFromBasket}>
                   Remove from basket
                 </button>
-                {/* )} */}
               </div>
             </div>
           </div>
@@ -55,8 +46,6 @@ const Basket = (): any => {
       );
     }
   );
-
-  // return <FlipMove>{basketItems2}</FlipMove>;
 
   return basketItems2;
 };

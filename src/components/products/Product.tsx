@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { useNotification } from "../notifications/NotificationProvider";
 import { useStateValue } from "../shared/provider/StateProvider";
 import "./Produc.css";
-//import { BL } from "../shared/provider/Reducer";
 
 const Product = ({
   title,

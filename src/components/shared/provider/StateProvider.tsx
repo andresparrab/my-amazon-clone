@@ -1,5 +1,4 @@
 import React, { createContext, useContext, useReducer } from "react";
-import reducer, { initialState } from "./Reducer";
 
 // Prepares the dataLayer
 export const StateContext = createContext({});
@@ -14,7 +13,6 @@ export const StateProvider = ({
   initialState: any;
   children: any;
 }): JSX.Element => {
-  // console.log("THIS IS SINSIDE SATEPROVIDER reducer", children);
   return (
     <StateContext.Provider value={useReducer(reducer, initialState)}>
       {children}

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "./Navigation.css";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
-//import Basket from "../../basket/Basket";
 import { useStateValue } from "../provider/StateProvider";
 import { auth } from "../provider/firebase";
 
@@ -15,11 +14,7 @@ const Navigation = (): JSX.Element => {
       auth.signOut();
     }
   };
-  //   dispatch({
-  //     type: "SET_USER",
-  //     user: null,
-  //   });
-  // };
+
   return (
     <div className="navigation">
       {/* logo */}
@@ -47,18 +42,12 @@ const Navigation = (): JSX.Element => {
           </div>
         </Link>
 
-        {/* <Link to="/orders"> */}
         <Link to={!user && "/login" ? "/" : "/orders"}>
           <div className="navigation_option">
             <span className="navigation_optionLineOne">Returns</span>
             <span className="navigation_optionLineTwo"> & orders</span>
           </div>
         </Link>
-
-        {/* <div className="navigation_option">
-          <span className="navigation_optionLineOne">Returns</span>
-          <span className="navigation_optionLineTwo"> & orders</span>
-        </div> */}
 
         <div className="navigation_option">
           <span className="navigation_optionLineOne">Your </span>

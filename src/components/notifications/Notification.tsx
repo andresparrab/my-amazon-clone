@@ -10,7 +10,6 @@ export const Notification = (props: any): JSX.Element => {
 
   const handleStartTimer = () => {
     const id = setInterval(() => {
-      console.log("this is INSIDE ID---<<<< ", id);
       setWidth((prev) => {
         if (prev < 100) {
           return prev + 0.5;
