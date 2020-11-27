@@ -58,7 +58,7 @@ export const Notification = (props: any): JSX.Element => {
         // eslint-disable-next-line prettier/prettier
         }`}
     >
-      <h4 className="notification_title">Number of item(s) added: </h4>
+      <h4 className="notification_title"> Added to basket </h4>
       <div className="itemInfo">
         <img className="itemSmall" src={props.image} />
         <p>{props.message}</p>

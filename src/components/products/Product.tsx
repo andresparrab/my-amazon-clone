@@ -45,7 +45,7 @@ const Product = ({
     dispatchNote({
       type: "SUCCESS",
       image: image,
-      message: title.substr(0, 27),
+      message: title.substr(0, 29),
     });
   };
 

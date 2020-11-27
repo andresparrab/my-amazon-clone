@@ -3,7 +3,7 @@ npm i -g firebase-tools
 firebase login
 firebase emulators:start
 firebase init
-firebase deploy --only functions  // if problems here, remove the . eslint.js in the root folder or in the function folder 
+firebase deploy --only functions  // THIS DEPLOYS THE Database if problems here, remove the . eslint.js in the root folder or in the function folder 
 npm run build                       //to build and optimize your front end code before deploy
 
 firebase deploy --only hosting       // to deploy the front end
