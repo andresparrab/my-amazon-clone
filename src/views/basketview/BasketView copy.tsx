@@ -17,14 +17,12 @@ const BasketView = (): JSX.Element => {
 
         <div className="basket_info">
           <div className="basket_item_title">
-            ..
             <p>{Item.title}</p>
             <p className="basket_price">
               <small>$</small>
               <strong>{Item.price}</strong>
             </p>
             <div className="basket_rating">
-              ..
               {Array(Item.rating)
                 .fill(null)
                 .map((_, i: number) => (
