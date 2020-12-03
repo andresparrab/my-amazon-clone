@@ -8,6 +8,7 @@ import { auth } from "../provider/firebase";
 
 const Navigation = (): JSX.Element => {
   const [{ basket, user }, dispatch] = useStateValue();
+  console.log("Andres is the best!!!")
 
   const signOut = () => {
     if (auth) {
